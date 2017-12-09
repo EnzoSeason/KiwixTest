@@ -3,16 +3,18 @@
 
 #include <QMainWindow>
 #include<QPushButton>
-#include<QTextBrowser>
+#include<QTextEdit>
 #include <QFile>
+#include<QFileDialog>
 #include <QDebug>
 #include<QString>
-#include<QHBoxLayout>
+#include<QVBoxLayout>
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-
+    QWidget *centralWidget;
+    QVBoxLayout *mBox;
 public:
     MainWindow(QWidget *parent = 0);
     ~MainWindow();
@@ -20,8 +22,7 @@ private slots:
     void handleButton();
 private:
     QPushButton *mButton;
-    QTextBrowser *mText;
-    QHBoxLayout *mBox;
+    QTextEdit *mText;
 };
 
 #endif // MAINWINDOW_H
