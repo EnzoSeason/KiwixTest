@@ -66,5 +66,6 @@ void MainWindow::handleButton(){
             pos += 21;//between two \n, we should have 20 char. So I add 21.
         }
         mText->append(line_in);//We add a line into mText to show it
+        pos = 20;//set pos = 20 for the next line_in
     }
 }
